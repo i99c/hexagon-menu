@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Sevillana", cursive;
+    font-family: "Stylish", serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     background: var(--bg-color);
 }
 
@@ -12,4 +19,47 @@
     --bg-color: #012340;
     --hexagon-bg: #025939;
     --text-color: #D2D7DA;
+}
+
+.container {
+    width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container .hexagonArea {
+    display: flex;
+}
+
+.container .hexagonArea.last {
+    transform: translateY(-45px);
+}
+
+.hexagon i {
+    font-size: 45px;
+    color: var(--text-color);
+}
+
+.hexagon h3 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.container .hexagonArea .hexagon {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin: 0 10px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background: var(--hexagon-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .5s;
 }
